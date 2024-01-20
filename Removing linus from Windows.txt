@@ -1,0 +1,18 @@
+Removing linux from boot menu (external hard drive)
+bcdedit /enum firmware
+bcdedit /export newbcd
+copy newbcd bcdbackup
+bcdedit /store newbcd /delete <identifier>
+bcdedit /import newbcd /clean
+Removing linux from boot menu (internal partition)
+diskpart
+list disk
+select disk 0
+list partition
+select partition 1
+assign letter=x
+exit
+x:
+cd EFI
+rd <linux>/s
+!!RUN COMMAND PROMPT IN ADMINISTER ACCESS!!

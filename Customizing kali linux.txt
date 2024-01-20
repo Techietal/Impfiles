@@ -1,0 +1,7 @@
+Customizing kali linux 
+sudo apt update
+sudo apt install kali-desktop-gnome -y
+select gdm3
+sudo reboot
+To change the default desktop
+sudo tasksel (Deselect the other desktops using space key and click enter to continue)
